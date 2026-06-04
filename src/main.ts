@@ -90,7 +90,7 @@ function getErrorDecorations(state: EditorState, settings: NaturalFeelSettings, 
 
 const forceUpdateEffect = StateEffect.define<null>();
 
-function smoothCaretPlugin(plugin: NaturalFeelPlugin) {
+function smoothCaretPlugin(plugin: LiquidEditorPlugin) {
     return ViewPlugin.fromClass(class {
         carets: HTMLElement[] = [];
         view: EditorView;
@@ -191,7 +191,7 @@ function smoothCaretPlugin(plugin: NaturalFeelPlugin) {
     });
 }
 
-function errorHighlightPlugin(plugin: NaturalFeelPlugin) {
+function errorHighlightPlugin(plugin: LiquidEditorPlugin) {
     return ViewPlugin.fromClass(class {
         decorations: DecorationSet;
         ghosts: DecorationSet = Decoration.none;
@@ -301,12 +301,12 @@ function errorHighlightPlugin(plugin: NaturalFeelPlugin) {
     });
 }
 
-export default class NaturalFeelPlugin extends Plugin {
+export default class LiquidEditorPlugin extends Plugin {
     settings: NaturalFeelSettings;
 
     async onload() {
         await this.loadSettings();
-        this.addSettingTab(new NaturalFeelSettingTab(this.app, this));
+        this.addSettingTab(new LiquidEditorSettingTab(this.app, this));
 
         this.registerDomEvent(window, 'keydown', () => {
             if (this.settings.hideCursorWhileTyping) {
