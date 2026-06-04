@@ -55,7 +55,7 @@ Every aspect of Natural Feel is customizable via the settings tab:
 
 ### Manual Installation
 1. Download the latest release (`main.js`, `manifest.json`, `styles.css`).
-2. Create a folder named `naturalfeel` in your vault's `.obsidian/plugins/` directory.
+2. Create a folder named `liquid-editor` in your vault's `.obsidian/plugins/` directory.
 3. Move the downloaded files into that folder.
 4. Reload Obsidian and enable the plugin in settings.
 
