@@ -2,9 +2,9 @@
   "id": "naturalfeel",
   "name": "Natural Feel",
   "version": "1.0.0",
-  "minAppVersion": "1.0.0",
+  "minAppVersion": "1.5.0",
   "description": "Makes your workspace feel more fluid with VS Code style smooth carets, animated error highlights, and intelligent cursor hiding.",
   "author": "Kabir",
-  "authorUrl": "https://github.com/Kabir-Legend",
+  "authorUrl": "https://github.com/kabir-offical",
   "isDesktopOnly": true
 }
