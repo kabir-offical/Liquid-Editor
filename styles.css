@@ -1,0 +1,134 @@
+/* Disable native spellcheck underlines */
+::spelling-error {
+    text-decoration: none !important;
+}
+
+::grammar-error {
+    text-decoration: none !important;
+}
+
+/* Custom error highlight container */
+.natural-feel-error-highlight {
+    position: relative;
+    --natural-feel-fade-duration: 0.3s;
+    --natural-feel-expand-duration: 0.25s;
+}
+
+/* The actual red box background */
+.natural-feel-error-highlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: -1px;
+    bottom: 0;
+    background-color: rgba(255, 0, 0, 0.25);
+    border-radius: 3px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Fade animation applied ONLY to the background */
+.natural-feel-error-highlight-fade::before {
+    animation: natural-feel-fade-in var(--natural-feel-fade-duration) ease-out forwards;
+}
+
+.natural-feel-error-highlight-fade-out::before {
+    animation: natural-feel-fade-out var(--natural-feel-fade-duration) ease-in forwards;
+}
+
+@keyframes natural-feel-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes natural-feel-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Expand animation applied ONLY to the background */
+.natural-feel-error-highlight-expand::before {
+    animation: natural-feel-expand-in var(--natural-feel-expand-duration) ease-out forwards;
+}
+
+.natural-feel-error-highlight-expand-out::before {
+    animation: natural-feel-contract-out var(--natural-feel-expand-duration) ease-in forwards;
+}
+
+@keyframes natural-feel-expand-in {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes natural-feel-contract-out {
+    from { clip-path: inset(0 0 0 0); }
+    to { clip-path: inset(0 0 0 100%); }
+}
+
+/* Smooth Caret Animation (Nested Structure) */
+.natural-feel-fake-caret-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+    transition: transform var(--natural-feel-caret-duration) ease-out;
+    will-change: transform;
+    display: none;
+}
+
+.cm-scroller.natural-feel-carets-moving .natural-feel-fake-caret-inner {
+    animation: none !important;
+    opacity: 1 !important;
+}
+
+.natural-feel-fake-caret-inner {
+    width: 1px;
+}
+
+/* Hide native cursors */
+.cm-editor .cm-cursor, 
+.cm-editor .cm-dropCursor {
+    opacity: 0 !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-content {
+    caret-color: transparent !important;
+}
+
+/* Blink effect for fake caret inner */
+.natural-feel-hide-cursor, .natural-feel-hide-cursor * {
+    cursor: none !important;
+}
+
+.natural-feel-fake-caret-blink-none {
+    animation: natural-feel-caret-blink-none 1s step-end infinite;
+}
+
+@keyframes natural-feel-caret-blink-none {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.natural-feel-fake-caret-blink-fade {
+    animation: natural-feel-caret-blink-fade 1s ease-in-out infinite;
+}
+
+@keyframes natural-feel-caret-blink-fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.natural-feel-fake-caret-blink-expand {
+    animation: natural-feel-caret-blink-expand 1s ease-in-out infinite;
+}
+
+.natural-feel-fake-caret-inner.origin-top { transform-origin: top; }
+.natural-feel-fake-caret-inner.origin-bottom { transform-origin: bottom; }
+.natural-feel-fake-caret-inner.origin-center { transform-origin: center; }
+
+@keyframes natural-feel-caret-blink-expand {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0); opacity: 0.5; }
+}
