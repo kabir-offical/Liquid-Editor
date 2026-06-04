@@ -1,13 +1,13 @@
-# Liquid Editor for Obsidian
+# Liquid Notes for Obsidian
 
-**Liquid Editor** is a highly polished Obsidian plugin designed to make your writing environment feel more fluid, responsive, and "alive." It replaces the static, jarring elements of the default editor with smooth, hardware-accelerated animations and intelligent behaviors inspired by modern editors like VS Code.
+**Liquid Notes** is a highly polished Obsidian plugin designed to make your writing environment feel more fluid, responsive, and "alive." It replaces the static, jarring elements of the default editor with smooth, hardware-accelerated animations and intelligent behaviors inspired by modern editors like VS Code.
 
 ---
 
 ## ✨ Features
 
 ### VS Code Style Smooth Caret
-The default cursor in Obsidian can feel robotic. Natural Feel replaces it with a custom-rendered "Fake Caret" that moves with fluid, GPU-accelerated transitions.
+The default cursor in Obsidian can feel robotic. Liquid Notes replaces it with a custom-rendered "Fake Caret" that moves with fluid, GPU-accelerated transitions.
 - **Fluid Movement:** The caret glides between characters and lines with a customizable duration.
 - **Smart Blinking:** Choose between classic, fade, or expansion blink animations.
 - **Responsive Feel:** Animations can be paused while you move the cursor for a "snappy" navigation experience.
@@ -17,7 +17,7 @@ The default cursor in Obsidian can feel robotic. Natural Feel replaces it with a
 > *The smooth caret gliding across lines.*
 
 ### Natural Error Highlights
-Default spellcheck underlines are thin and easily missed. Natural Feel identifies misspelled words and highlights them with subtle, rounded red boxes.
+Default spellcheck underlines are thin and easily missed. Liquid Notes identifies misspelled words and highlights them with subtle, rounded red boxes.
 - **Entrance/Exit Animations:** Choose between **Fade** or **Expand** animations when an error is detected or corrected.
 - **Typing Awareness:** Highlighting is debounced (delayed) while you type, so you aren't distracted by "ghost" errors before you finish a word.
 - **Intelligent Boundaries:** Highlights are precisely scoped to words, respecting punctuation and formatting.
@@ -32,7 +32,7 @@ Minimize distractions while typing. When enabled, your mouse cursor will automat
 
 ## ⚙️ Configuration
 
-Every aspect of Natural Feel is customizable via the settings tab:
+Every aspect of Liquid Notes is customizable via the settings tab:
 
 | Setting | Description | Default |
 | :--- | :--- | :--- |
@@ -50,7 +50,7 @@ Every aspect of Natural Feel is customizable via the settings tab:
 
 ### Via Community Plugins (Pending)
 1. Open **Settings** > **Community Plugins**.
-2. Click **Browse** and search for `Natural Feel`.
+2. Click **Browse** and search for `Liquid Notes`.
 3. Click **Install**, then **Enable**.
 
 ### Manual Installation
