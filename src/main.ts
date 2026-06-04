@@ -90,7 +90,7 @@ function getErrorDecorations(state: EditorState, settings: NaturalFeelSettings, 
 
 const forceUpdateEffect = StateEffect.define<null>();
 
-function smoothCaretPlugin(plugin: LiquidEditorPlugin) {
+function smoothCaretPlugin(plugin: LiquidNotesPlugin) {
     return ViewPlugin.fromClass(class {
         carets: HTMLElement[] = [];
         view: EditorView;
@@ -191,7 +191,7 @@ function smoothCaretPlugin(plugin: LiquidEditorPlugin) {
     });
 }
 
-function errorHighlightPlugin(plugin: LiquidEditorPlugin) {
+function errorHighlightPlugin(plugin: LiquidNotesPlugin) {
     return ViewPlugin.fromClass(class {
         decorations: DecorationSet;
         ghosts: DecorationSet = Decoration.none;
@@ -301,12 +301,12 @@ function errorHighlightPlugin(plugin: LiquidEditorPlugin) {
     });
 }
 
-export default class LiquidEditorPlugin extends Plugin {
+export default class LiquidNotesPlugin extends Plugin {
     settings: NaturalFeelSettings;
 
     async onload() {
         await this.loadSettings();
-        this.addSettingTab(new LiquidEditorSettingTab(this.app, this));
+        this.addSettingTab(new LiquidNotesSettingTab(this.app, this));
 
         this.registerDomEvent(window, 'keydown', () => {
             if (this.settings.hideCursorWhileTyping) {
@@ -352,9 +352,9 @@ export default class LiquidEditorPlugin extends Plugin {
     }
 }
 
-class LiquidEditorSettingTab extends PluginSettingTab {
-    plugin: LiquidEditorPlugin;
-    constructor(app: App, plugin: LiquidEditorPlugin) {
+class LiquidNotesSettingTab extends PluginSettingTab {
+    plugin: LiquidNotesPlugin;
+    constructor(app: App, plugin: LiquidNotesPlugin) {
         super(app, plugin);
         this.plugin = plugin;
     }

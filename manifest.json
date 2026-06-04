@@ -1,6 +1,6 @@
 {
-  "id": "liquid-editor",
-  "name": "Liquid Editor",
+  "id": "liquid-notes",
+  "name": "Liquid Notes",
   "version": "1.0.0",
   "minAppVersion": "1.5.0",
   "description": "Makes your workspace feel more fluid with VS Code style smooth carets, animated error highlights, and intelligent cursor hiding.",
