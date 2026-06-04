@@ -1,6 +1,6 @@
-# Natural Feel for Obsidian
+# Liquid Editor for Obsidian
 
-**Natural Feel** is a highly polished Obsidian plugin designed to make your writing environment feel more fluid, responsive, and "alive." It replaces the static, jarring elements of the default editor with smooth, hardware-accelerated animations and intelligent behaviors inspired by modern editors like VS Code.
+**Liquid Editor** is a highly polished Obsidian plugin designed to make your writing environment feel more fluid, responsive, and "alive." It replaces the static, jarring elements of the default editor with smooth, hardware-accelerated animations and intelligent behaviors inspired by modern editors like VS Code.
 
 ---
 

@@ -1,6 +1,6 @@
 {
-  "id": "naturalfeel",
-  "name": "Natural Feel",
+  "id": "liquid-editor",
+  "name": "Liquid Editor",
   "version": "1.0.0",
   "minAppVersion": "1.5.0",
   "description": "Makes your workspace feel more fluid with VS Code style smooth carets, animated error highlights, and intelligent cursor hiding.",

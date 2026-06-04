@@ -352,12 +352,13 @@ export default class NaturalFeelPlugin extends Plugin {
     }
 }
 
-class NaturalFeelSettingTab extends PluginSettingTab {
-    plugin: NaturalFeelPlugin;
-    constructor(app: App, plugin: NaturalFeelPlugin) {
+class LiquidEditorSettingTab extends PluginSettingTab {
+    plugin: LiquidEditorPlugin;
+    constructor(app: App, plugin: LiquidEditorPlugin) {
         super(app, plugin);
         this.plugin = plugin;
     }
+
 
     private addResetButton(setting: Setting, key: keyof NaturalFeelSettings) {
         setting.addExtraButton(button => {
